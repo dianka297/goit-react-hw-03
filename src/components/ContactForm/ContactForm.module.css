@@ -1,0 +1,39 @@
+.container {
+    width: 300px;
+    padding: 8px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contactInfo {
+    width: 270px;
+    height: 24px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.contactInfo:focus,
+.contactInfo:hover {
+    border: 1px solid mediumblue;
+    border-radius: 4px;
+}
+
+.addBtn {
+    align-self: center;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.error {
+    font-size: 14px;
+}

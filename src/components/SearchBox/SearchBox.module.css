@@ -1,0 +1,25 @@
+.container {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.label {
+    margin-bottom: 4px;
+}
+
+.searchBox {
+    width: 270px;
+    height: 24px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.searchBox:focus,
+.searchBox:hover {
+    border: 1px solid mediumblue;
+    border-radius: 4px;
+}

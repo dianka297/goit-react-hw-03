@@ -1,0 +1,11 @@
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.userIcon {
+    vertical-align: middle;
+    padding-right: 4px;
+}
