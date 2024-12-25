@@ -1,27 +1,30 @@
-import css from './Contact.module.css';
-import { HiMiniUser, HiPhone } from 'react-icons/hi2';
+import { FaUser, FaPhone } from "react-icons/fa";
+import css from "./Contact.module.css";
+const Contact = ({ contact: { id, name, number }, onDelete }) => {
+    return (
+        <>
+            <p className={css.contactInfo}>
+                <FaUser style={{ marginRight: "0.5rem" }} />
+                {name}
+                <span>
+                    <FaPhone
+                        style={{
+                            marginRight: "0.5rem",
+                            transform: "rotate(90deg)",
+                        }}
+                    />
+                    {number}
+                </span>
+            </p>
+            <button
+                className={css.delete}
+                type="button"
+                onClick={() => onDelete(id)}
+            >
+                Delete
+            </button>
+        </>
+    );
+};
 
-export default function Contact({ contact, onDelete }) {
-  return (
-    <>
-      <div className={css.contactInfo}>
-        <p className="text">
-          <HiMiniUser className={css.userIcon} />
-          {contact.name}
-        </p>
-        <p className="text">
-          <HiPhone className={css.userIcon} />
-          {contact.number}
-        </p>
-      </div>
-      <button
-        type="button"
-        onClick={() => {
-          onDelete(contact.id);
-        }}
-      >
-        Delete
-      </button>
-    </>
-  );
-}
+export default Contact;

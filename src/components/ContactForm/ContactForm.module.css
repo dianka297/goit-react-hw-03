@@ -1,39 +1,41 @@
-.container {
-    width: 300px;
-    padding: 8px;
-}
-
 .form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-}
+    padding: 16px 24px;
+    width: 400px;
+    border: 1px solid var(--grey);
+    background-color: var(--blue);
+    border-radius: 8px;
 
-.contactInfo {
-    width: 270px;
-    height: 24px;
-    outline: none;
-    border: 1px solid black;
-    border-radius: 4px;
-    padding: 0;
-}
-
-.contactInfo:focus,
-.contactInfo:hover {
-    border: 1px solid mediumblue;
-    border-radius: 4px;
-}
-
-.addBtn {
-    align-self: center;
-}
-
-.group {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.error {
-    font-size: 14px;
+    input {
+        padding: 6px 8px;
+    }
+    input:focus-within {
+        border-color: var(--gold);
+    }
+    button,
+    input {
+        border: inherit;
+        border-radius: 4px;
+    }
+    label:last-of-type {
+        margin-top: 12px;
+    }
+    button {
+        margin-top: 18px;
+        padding: 6px 12px;
+        margin-inline: auto;
+        background-color: var(--blue);
+        cursor: pointer;
+        transition: background-color var(--animation),
+            box-shadow var(--animation);
+        &:hover {
+            background-color: var(--hblue);
+            box-shadow: 4px 4px 8px rgb(82, 167, 196);
+        }
+    }
+    span {
+        color: var(--red);
+        font-size: 1rem;
+    }
 }
